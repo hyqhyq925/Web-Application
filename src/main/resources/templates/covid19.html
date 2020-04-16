@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head style = "border: 24px solid black;">
+<style>
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body style = "border: 24px solid blue;">
+<h2 style="font-family:courier;">Covid-19 on some states</h2>
+<table style="width:100%">
+<tr>
+    <th>State</th>
+    <th>Confirmed</th> 
+    <th>Deaths</th>
+    <th>Recovered</th>
+    <th>Active</th>
+</tr>
+<tr th:each="stateCovid : ${stateCovidList}">
+    <td th:text="${stateCovid.state}"></td>
+    <td th:text="${stateCovid.confirmed}" style="text-align: right;"></td>
+    <td th:text="${stateCovid.deaths}" style="text-align: right;"></td>
+    <td th:text="${stateCovid.recovered}" style="text-align: right;"></td>
+    <td th:text="${stateCovid.active}" style="text-align: right;"></td>
+  </tr>
+</table>
+<br><a style="font-family:verdana;color:black;" href = "home.html">CLICK HERE TO GO BACK TO HOME PAGE</a>
+</body>
+</html>
