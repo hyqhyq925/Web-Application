@@ -27,7 +27,11 @@ public class WebController {
 	@RequestMapping("/Kobe.html")
 	public String Kobe() {
 		return "Kobe";
-}
+	}
+	@RequestMapping("/highlights.html")
+	public String highlights() {
+		return "highlights";
+	}
 	@RequestMapping("/covid19.html")
 	public String covid19(Model model) {
 		// pass the list to template
